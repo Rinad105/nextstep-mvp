@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover courses, workshops, competitions, volunteering and more with NextStep.">
+  <title>NextStep — Find your next opportunity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar wrap">
+    <a class="brand" href="/" aria-label="NextStep home"><img class="brand-logo" src="/logo.png" alt="NextStep logo"><span class="brand-word">NextStep</span></a>
+    <nav class="nav-links"><a href="#discover">Discover</a><a href="#plans" id="plansNav" class="hidden">Plans & upgrades</a><a href="#how">How it works</a></nav>
+    <div class="nav-actions" id="navActions"><a class="text-link" href="/login.html">Log in</a><a class="button button-small guest-only" href="/signup.html">Get started <span>↗</span></a></div>
+  </header>
+  <main>
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> YOUR NEXT CHAPTER STARTS HERE</div>
+        <h1>Good things happen<br>when you take the <span class="gradient-text">next step.</span></h1>
+        <p class="hero-lede">Discover real opportunities published by organizations and academies. Learn online, or find your next in-person experience — all in one place.</p>
+        <div class="hero-actions"><a class="button" href="#discover">Explore opportunities <span>↗</span></a><a class="button button-ghost guest-only" href="/signup.html">Join NextStep</a></div>
+        <div class="trust-line"><span>For curious minds ready to grow</span></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative NextStep opportunity cards">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="art-core"><span class="core-arrow">↗</span><span class="core-label">YOUR POTENTIAL<br>HAS NO LIMIT</span></div>
+        <div class="float-card float-top"><span class="mini-icon purple">✳</span><span><b>Learn something new</b><small>Skills that move you forward</small></span><span class="float-arrow">↗</span></div>
+        <div class="float-card float-bottom"><span class="mini-icon blue">⌁</span><span><b>Find your people</b><small>Opportunities that fit you</small></span><span class="float-arrow">↗</span></div>
+        <div class="spark spark-one">✦</div><div class="spark spark-two">✧</div>
+      </div>
+    </section>
+    <section class="stats wrap"><div><strong>01</strong><span>Place to discover</span></div><div><strong>REAL</strong><span>Provider-published listings</span></div><div><strong>YOU</strong><span>At the center</span></div></section>
+    <section class="discover-section wrap" id="discover">
+      <div class="section-heading"><div><div class="eyebrow">MAKE YOUR MOVE</div><h2>Find what moves <span class="gradient-text">you.</span></h2><p>Explore what’s out there. Your next opportunity might be closer than you think.</p></div><a class="text-link desktop-link" href="#opportunityGrid">View all opportunities <span>↗</span></a></div>
+      <div class="filter-panel">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search opportunities..." aria-label="Search opportunities"></label>
+        <select id="typeFilter" aria-label="Opportunity type"><option>All types</option><option>Course</option><option>Workshop</option><option>Competition</option><option>Event</option><option>Volunteering</option><option>Scholarship</option><option>Other</option></select>
+        <select id="subjectFilter" aria-label="Subject"><option>All subjects</option><option>Technology</option><option>Business</option><option>Entrepreneurship</option><option>Community</option><option>Design</option><option>Science</option><option>Career</option><option>Other</option></select>
+        <select id="modeFilter" aria-label="Format"><option>Any format</option><option>Online</option><option>Offline</option><option>Hybrid</option></select>
+        <button class="button button-filter" id="clearFilters" type="button">Reset</button>
+      </div>
+      <div class="results-row"><span id="resultsCount">Loading opportunities…</span><span class="results-note">A little discovery goes a long way.</span></div>
+      <div class="opportunity-grid" id="opportunityGrid"><div class="loading-card">Finding opportunities for you…</div></div>
+      <div class="empty-state hidden" id="emptyState"><div class="empty-symbol">⌕</div><h3>No published opportunities yet</h3><p>We do not add sample or made-up listings. When an organization or academy publishes a real opportunity, it will appear here.</p><a class="button button-ghost guest-only" href="/signup.html?role=organization">Publish the first opportunity</a><button class="button button-ghost" id="emptyReset">Clear filters</button></div>
+    </section>
+    <section class="plans-section wrap hidden" id="plans">
+      <div class="section-heading"><div><div class="eyebrow">FOR ORGANIZATIONS & ACADEMIES</div><h2>Grow your reach with <span class="gradient-text">the right plan.</span></h2><p>Promote opportunities and publish online learning content directly on NextStep.</p></div></div>
+      <div class="plans-grid">
+        <article class="plan-card"><div class="plan-kicker">STARTER</div><h3>Free</h3><p class="plan-price">0 <span>JOD / month</span></p><ul><li>Up to 2 active opportunities</li><li>Provider profile</li><li>Share course or registration links</li></ul><a class="button button-ghost plan-button guest-only" href="/signup.html?role=organization">Start free</a></article>
+        <article class="plan-card plan-featured"><div class="plan-kicker">FOR GROWING PROVIDERS</div><h3>Professional</h3><p class="plan-price">15 <span>JOD / month</span></p><ul><li>Up to 15 active listings</li><li>Promote courses and opportunities</li><li>Basic listing analytics (demo)</li></ul><button class="button plan-button" type="button" data-demo-pay="Professional plan · 15 JOD/month">Choose Professional</button></article>
+        <article class="plan-card"><div class="plan-kicker">MORE VISIBILITY</div><h3>Promoted listing</h3><p class="plan-price">5 <span>JOD / listing</span></p><ul><li>Highlight one opportunity</li><li>Increase visibility (demo)</li><li>Suitable for courses and events</li></ul><button class="button button-ghost plan-button" type="button" data-demo-pay="Promoted listing · 5 JOD">Promote a listing</button></article>
+      </div>
+      <p class="plan-disclaimer">Demo checkout only — no real payment will be taken. Paid features and the 8% registration commission are planned for a later version.</p>
+    </section>
+    <section class="match-section" id="how"><div class="wrap match-inner"><div class="match-art"><div class="match-orb">✳</div><div class="match-chip chip-one">Your interests <span>✓</span></div><div class="match-chip chip-two">Your next step <span>↗</span></div><div class="match-lines"></div></div><div class="match-copy"><div class="eyebrow">BUILT AROUND YOU</div><h2>Less searching.<br><span class="gradient-text">More becoming.</span></h2><p>NextStep brings opportunities together so you can spend less time searching across platforms and more time learning, building and connecting.</p><div class="feature-list"><div><span class="feature-check">✓</span><span><b>Discover in one place</b><small>Courses, workshops, competitions and more.</small></span></div><div><span class="feature-check">✓</span><span><b>Save what inspires you</b><small>Keep interesting opportunities close.</small></span></div><div><span class="feature-check">✳</span><span><b>Smart Match is on the roadmap</b><small>Personalized recommendations will improve as we learn from users.</small></span></div></div><a class="button guest-only" href="/signup.html">Start your journey <span>↗</span></a></div></div></section>
+    <section class="cta wrap guest-only" id="guestCta"><div class="cta-glow"></div><div class="eyebrow">YOUR FUTURE ISN'T ON HOLD</div><h2>One small step can<br>open <span class="gradient-text">a new world.</span></h2><p>Find your next opportunity with NextStep.</p><a class="button guest-only" href="/signup.html">Create your free account <span>↗</span></a></section>
+  </main>
+  <footer class="footer wrap"><a class="brand" href="/"><img class="brand-logo" src="/logo.png" alt="NextStep logo"><span class="brand-word">NextStep</span></a><span>Discover. Develop. Do more.</span><span>© 2026 NextStep · MVP</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div><dialog class="demo-payment" id="demoPayment"><form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form><div class="eyebrow">NEXTSTEP CHECKOUT · DEMO</div><h2>Choose payment method</h2><p id="demoPlanName">Selected plan</p><div class="payment-methods"><label><input type="radio" name="paymentMethod" checked> Visa / Mastercard</label><label><input type="radio" name="paymentMethod"> CliQ / bank transfer</label><label><input type="radio" name="paymentMethod"> PayPal</label></div><label class="demo-card-label">Card number (demo only)<input placeholder="4242 4242 4242 4242" inputmode="numeric"></label><div class="demo-payment-note">This is a non-functional prototype. Do not enter real payment details.</div><button class="button" id="confirmDemoPayment" type="button">Continue to demo payment</button><p class="form-hint" id="demoPaymentResult"></p></dialog>
+</body></html>
